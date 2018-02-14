@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+
+@font-face {
+    font-family: IndieFlower;
+    src: url(assets/fonts/IndieFlower.ttf);
+}
+@font-face {
+    font-family: Questrial;
+    src: url(assets/fonts/Questrial-Regular.ttf);
+}
+
+
+*{
+    font-family: Questrial;
+}
