@@ -9,10 +9,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { BlogListComponent } from './blog-list/blog-list.component';
 import { HomeComponent } from './home/home.component';
 import {MatListModule} from '@angular/material/list';
+import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: "blogs", component : BlogListComponent},
+  { path: "blog/:id", component : BlogDetailComponent},
   
 
 ];
@@ -22,7 +24,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     BlogListComponent,
-    HomeComponent
+    HomeComponent,
+    BlogDetailComponent
   ],
   imports: [
     BrowserModule,
