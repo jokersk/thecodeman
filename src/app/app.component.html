@@ -1,12 +1,15 @@
-<mat-toolbar color="primary">
-    <mat-toolbar-row>
-        <span>The Code Man</span>
-    </mat-toolbar-row>
-</mat-toolbar>
-<div class="world-center m-5 d-flex justify-content-center align-items-center">
-    <h1>
-        Give me a keyboard, I'll give you a new world 
-    </h1>
-  </div>
+<nav class="deep-purple darken-1">
+    <div class="nav-wrapper">
+        <a routerLink="" class="brand-logo ml-2">The Code Man</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a routerLink="blogs">Blogs</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+
+
 
 
