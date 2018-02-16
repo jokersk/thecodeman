@@ -5,7 +5,7 @@
     我決定寫低我到底係點樣set up呢個site，等第日自己可以睇翻。
   </p>
 
-  <b>1. 首先，買server記</b>
+  <b>1. 買server</b>
   <p>
     講起慚愧，雖然我做左IT狗多年，但係搭建server都係未試過。自己幻想有自己website好多年，但係因為懶癌，遲遲都唔做。
     如果唔係今次真系火燒眼眉，睇來自己都係唔會做。
@@ -17,7 +17,53 @@
     <br>
     咁之後就要個cs幫我remove account 同退錢，但係到宜家（2018-2-15）都仲未remove account（遲D記得跟跟佢）
     <br>
-    又過一日，我又再問google大神，有咩vps hosting好，於是就搵左一件v字頭公司。
+    又過一日，我又再問google大神，有咩vps hosting好，於是就搵左一件v字頭公司。 終於買左個vps翻來，以為所有野都會好順利，點知，呢度先系噩夢開始。
+
   </p>
+
+  <b>2. set server</b>
+  <p>
+    我買既server系一個 Ubuntu 系統， 而Ubuntu系一個操作系統。 Ubuntu本身系非洲南部一種語言一詞，意思系“我存在因為大家的存在”。
+    因為細個受《獅子王》影響，對非洲詞好有好感，於是我選擇Ubuntu。 於是乎，我手上就有一個os，同一個ip address。 
+    <br>   
+    我滿懷期待系broswer入個ip address睇下有咩事發生。 結果系咩事都冇發生。
+    於是乎根據我既經驗，裝左個php先：
+
+  </p> 
+  <div class="alert alert-info" role="alert">
+    sudo apt-get install php
+  </div>
+
+  <p>
+    佢自動咁，同我裝左 PHP 7.1 （最新版）， 跟住我就touch一個php file，再行
+  </p>
+  <div class="alert alert-info" role="alert">
+    php -S localhost:4000 
+  </div>
+  <p>
+    再系broswer 入 <span class="red-text">ip_address</span>:4000 , 激動！ 果然成功。 
+    
+  </p>
+
+  <div class="alert alert-warning" role="alert">
+    系呢度解釋下 php -S localhost:4000 系咩。 如果你系自己部電腦創建一個html file，你自己睇，你只要double click，佢就可以睇到。
+    但如果想用手機都睇到呢個file，咁點做呢？ 我地就要set一個web伺服器，令到電話可以用broswer睇到個html 文件。 而php -S xxx 就係一個php 內建
+    的一個伺服器。雖然方便，都係性能不好。
+  </div>
+
+  <p>
+    我需要一個真正的伺服器。 我選擇nginx。 因為 nginx 比 apache 快同新。
+    <br> 
+    安裝 nginx :
+  </p>
+
+  <div class="alert alert-info" role="alert">
+    sudo apt-get install NGINX
+  </div>
+
+  
+
+
+  
   
 </div>
