@@ -13,7 +13,7 @@ export class BlogListComponent implements OnInit {
   blogs: any
 
   constructor( private http:HttpClient ) {
-
+    
   }
 
   ngOnInit() {
