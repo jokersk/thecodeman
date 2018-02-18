@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {HttpClient} from "@angular/common/http";
 import { url } from '../url/url';
-import marked = require('marked');
+import * as marked from  'marked';
 
 @Component({
   selector: 'app-blog-detail',
