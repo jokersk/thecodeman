@@ -10,7 +10,7 @@ import { BlogListComponent } from './blog-list/blog-list.component';
 import { HomeComponent } from './home/home.component';
 import {MatListModule} from '@angular/material/list';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
-
+import {HttpClientModule} from '@angular/common/http';
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: "blogs", component : BlogListComponent},
@@ -28,6 +28,7 @@ const appRoutes: Routes = [
     BlogDetailComponent
   ],
   imports: [
+    
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,
@@ -36,7 +37,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes
     ),
-    MatListModule
+    MatListModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

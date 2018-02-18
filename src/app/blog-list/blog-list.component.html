@@ -1,15 +1,13 @@
 
-    <div class="row">
+    <div class="row" *ngFor="let blog of blogs">
         <div class="col s12 m6">
           <div class="card ">
             <div class="card-content deep-purple-text darken-1">
-              <span class="card-title ">萬事起頭難</span>
-              <p class="blue-grey-text darken-3">搞左成日，終於搞掂個site。 終於有自己個site啦。為左唔悲慘既歷史再一次重演。
-                我決定寫低我到底係點樣set up呢個site，等第日自己可以睇翻。
-              </p>
+              <span class="card-title ">{{blog.title}}</span>
+              <p class="blue-grey-text darken-3" [innerHTML]="blog.content | slice:0:50"></p>
             </div>
             <div class="card-action">
-              <a routerLink="/blog/1">詳情</a>
+              <a routerLink="/blog/{{blog.id}}">詳情</a>
             </div>
           </div>
         </div>
