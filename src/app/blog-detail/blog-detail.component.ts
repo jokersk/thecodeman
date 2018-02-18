@@ -2,7 +2,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {HttpClient} from "@angular/common/http";
 import { url } from '../url/url';
-
+import marked = require('marked');
 
 @Component({
   selector: 'app-blog-detail',
@@ -13,8 +13,11 @@ import { url } from '../url/url';
   
   
 })
+
+
 export class BlogDetailComponent implements OnInit {
-  marked = require('marked');
+  
+  
   constructor( private route: ActivatedRoute, private http:HttpClient  ) { }
   
   id:number;
@@ -28,7 +31,7 @@ export class BlogDetailComponent implements OnInit {
         .toPromise()
         .then(data=>{
           this.blog = data
-          this.blog.content = this.marked(this.blog.content)
+          this.blog.content = marked(this.blog.content)
           
         })
         
