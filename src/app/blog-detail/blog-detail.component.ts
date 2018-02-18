@@ -18,7 +18,7 @@ export class BlogDetailComponent implements OnInit {
       .subscribe(params => {
         this.id = +params.get("id");
         this.http
-        .get(`http://localhost:8000/api/blog/${this.id}`)
+        .get(`http://blog.thecodeman.co/api/blog/${this.id}`)
         .toPromise()
         .then(data=>{
           this.blog = data

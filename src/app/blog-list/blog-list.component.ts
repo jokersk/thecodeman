@@ -13,13 +13,13 @@ export class BlogListComponent implements OnInit {
   blogs: any
 
   constructor( private http:HttpClient ) {
-    
+
   }
 
   ngOnInit() {
     
      this.http
-    .get("http://localhost:8000/api/blogs-list")
+    .get("http://blog.thecodeman.co/api/blogs-list")
     .toPromise()
     .then(data=>{
       this.blogs = data
