@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import {HttpClient} from "@angular/common/http";
+import { url } from '../url/url';
 
 @Component({
   selector: 'app-blog-detail',
@@ -9,7 +10,7 @@ import {HttpClient} from "@angular/common/http";
 })
 export class BlogDetailComponent implements OnInit {
   
-  constructor( private route: ActivatedRoute, private http:HttpClient) { }
+  constructor( private route: ActivatedRoute, private http:HttpClient ) { }
   
   id:number;
   blog : any;
@@ -18,7 +19,7 @@ export class BlogDetailComponent implements OnInit {
       .subscribe(params => {
         this.id = +params.get("id");
         this.http
-        .get(`http://blog.thecodeman.co/api/blog/${this.id}`)
+        .get(`${url}/api/blog/${this.id}`)
         .toPromise()
         .then(data=>{
           this.blog = data

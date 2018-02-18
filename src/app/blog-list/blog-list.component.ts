@@ -3,6 +3,7 @@ import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs/Observable";
 
 import 'rxjs/add/operator/toPromise';
+import { url } from '../url/url';
 @Component({
   selector: 'app-blog-list',
   templateUrl: './blog-list.component.html',
@@ -12,14 +13,14 @@ export class BlogListComponent implements OnInit {
   
   blogs: any
 
-  constructor( private http:HttpClient ) {
+  constructor( private http:HttpClient  ) {
 
   }
 
   ngOnInit() {
     
      this.http
-    .get("http://blog.thecodeman.co/api/blogs-list")
+    .get(`${url}/api/blogs-list`)
     .toPromise()
     .then(data=>{
       this.blogs = data
