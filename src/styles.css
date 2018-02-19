@@ -3,11 +3,11 @@
 /* @import '~bootstrap-css-only/css/bootstrap.css'; */
 @import '~materialize-css/dist/css/materialize.css';
 
-@import '~basscss-flexbox/index.css';
+@import '~basscss-flexbox/css/flexbox.css';
 @import '~basscss-grid/css/grid.css';
-@import '~basscss-align/index.css';
-@import '~basscss-margin/index.css';
-@import '~basscss-padding/index.css';
+@import '~basscss-align/css/align.css';
+@import '~basscss-margin/css/margin.css';
+@import '~basscss-padding/css/padding.css';
 
 
 
