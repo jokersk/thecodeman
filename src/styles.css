@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
-@import '~bootstrap-css-only/css/bootstrap.css';
+/* @import '~bootstrap-css-only/css/bootstrap.css'; */
 @import '~materialize-css/dist/css/materialize.css';
+
+@import '~basscss-flexbox/index.css';
+@import '~basscss-grid/css/grid.css';
+@import '~basscss-align/index.css';
+@import '~basscss-margin/index.css';
+@import '~basscss-padding/index.css';
 
 
 
