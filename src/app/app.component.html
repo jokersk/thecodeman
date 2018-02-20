@@ -1,22 +1,21 @@
 
    
-        <nav class="nav-extended deep-purple darken-1 ">
-            <div class="nav-wrapper container">
-                <a routerLink="" class="brand-logo ml-2">The Code Man</a>
-                <ul id="nav-mobile" class="right ">
-                    <li><a routerLink="blogs">Blogs</a></li>
-                </ul>
-            </div>
-            <div *ngIf="showHeader"  class="nav-header center world-center d-flex justify-content-center align-items-center">
-                <h1 class="mt0">
-                    Give me a keyboard, I'll give you a new world 
-                </h1>
-            </div>
-        </nav>
+<nav class="nav-extended deep-purple darken-1 ">
+    <div class="nav-wrapper   container">
+        <a routerLink="" class="brand-logo ml-2">The Code Man</a>
+        <ul id="nav-mobile" class="right ">
+            <li><a routerLink="blogs">Blogs</a></li>
+        </ul>
+    </div>
+    <div *ngIf="showHeader"  class="nav-header center world-center d-flex justify-content-center align-items-center">
+        <h1 class="mt0">
+            Give me a keyboard, I'll give you a new world 
+        </h1>
+    </div>
+</nav>
    
 
 <div class="container my2">
-    
     <router-outlet></router-outlet>
 </div>
 
