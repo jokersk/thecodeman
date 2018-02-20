@@ -27,7 +27,7 @@ export class BlogDetailComponent implements OnInit {
         .get(`${url}/api/blog/${this.id}`)
         .toPromise()
         .then(data=>{
-          console.log(data)
+          
           this.blog = data
           this.blog.content = marked(this.blog.content)
           

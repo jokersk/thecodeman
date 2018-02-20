@@ -26,7 +26,7 @@ export class AppComponent {
     .subscribe(
       (event) => {
           
-          if(event.url.match(/blog\/\d+/))
+          if(event instanceof NavigationEnd &&   event.url.match(/blog\/\d+/))
           {
             this.showHeader = false;
           }else{
