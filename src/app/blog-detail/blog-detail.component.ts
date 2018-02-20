@@ -9,9 +9,6 @@ import * as marked from  'marked';
   templateUrl: './blog-detail.component.html',
   styleUrls: ['./blog-detail.component.css'],
   encapsulation: ViewEncapsulation.None
-  
-  
-  
 })
 
 

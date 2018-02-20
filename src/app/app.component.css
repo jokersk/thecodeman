@@ -13,3 +13,24 @@ button{
 .nav-wrapper{
     padding: 0 15px;
 }
+.world-center {
+    padding:80px 0;
+}    
+.world-center h1{
+    font-family: IndieFlower;
+    font-size: 50px;
+    color: #333;
+    padding: 20px 0;
+    color: #fff;
+}
+@media (max-width:414px){
+    .world-center {
+        padding:40px 0;
+    }  
+    .world-center h1{
+        font-size: 30px;
+    }
+}
+.background{
+    background-color: #5e35b1;
+}

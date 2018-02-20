@@ -1,5 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
 
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +12,28 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  showHeader = true;
+
+  constructor(  
+    private router:Router 
+  ) { }
+  
+  
+
+  ngOnInit(){
+    this.router.events
+    .filter(event => event instanceof NavigationEnd)
+    .subscribe(
+      (event) => {
+          
+          if(event.url.match(/blog\/\d+/))
+          {
+            this.showHeader = false;
+          }else{
+            this.showHeader = true;
+          }
+          
+      }
+    )
+  }
 }
