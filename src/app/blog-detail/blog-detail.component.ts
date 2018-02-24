@@ -3,6 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import {HttpClient} from "@angular/common/http";
 import { url } from '../url/url';
 import * as marked from  'marked';
+import { CommentComponent } from '../comment/comment.component';
 
 @Component({
   selector: 'app-blog-detail',
@@ -10,7 +11,6 @@ import * as marked from  'marked';
   styleUrls: ['./blog-detail.component.css'],
   encapsulation: ViewEncapsulation.None
 })
-
 
 export class BlogDetailComponent implements OnInit {
   

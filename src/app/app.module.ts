@@ -11,6 +11,12 @@ import { HomeComponent } from './home/home.component';
 import {MatListModule} from '@angular/material/list';
 import { BlogDetailComponent } from './blog-detail/blog-detail.component';
 import {HttpClientModule} from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { CommentComponent } from './comment/comment.component';
+import {MatInputModule} from '@angular/material/input';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { FormsModule } from '@angular/forms';
+
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
   { path: "blogs", component : BlogListComponent},
@@ -25,10 +31,14 @@ const appRoutes: Routes = [
     AppComponent,
     BlogListComponent,
     HomeComponent,
-    BlogDetailComponent
+    BlogDetailComponent,
+    CommentComponent
   ],
   imports: [
-    
+    FormsModule,
+    HttpModule,
+    MatSnackBarModule,
+    MatInputModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatButtonModule, MatCheckboxModule,

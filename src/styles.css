@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
 /* @import '~bootstrap-css-only/css/bootstrap.css'; */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import '~materialize-css/dist/css/materialize.css';
 
 @import '~basscss-flexbox/css/flexbox.css';
@@ -9,6 +10,10 @@
 @import '~basscss-margin/css/margin.css';
 @import '~basscss-padding/css/padding.css';
 
+
+.mat-form-field-underline .mat-form-field-ripple{
+    background-color: #26a69a;
+}
 
 
 @font-face {
