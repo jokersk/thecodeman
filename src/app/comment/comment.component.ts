@@ -32,9 +32,7 @@ export class CommentComponent implements OnInit {
     this._boldId = blogId
     this.http.get(`${url}api/getComments/${blogId}`)
     .subscribe(res=>{
-      console.log(res.json())
       this.comments = res.json()
-      
     })
   }
 
