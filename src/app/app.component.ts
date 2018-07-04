@@ -6,7 +6,7 @@ import { Http, Headers } from '@angular/http';
 import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/mergeMap';
-
+import { Meta } from '@angular/platform-browser';
 
 
 @Component({
@@ -23,7 +23,8 @@ export class AppComponent {
   constructor(  
     private router:Router ,
     private http:Http,
-    private aRoute:ActivatedRoute
+    private aRoute:ActivatedRoute,
+    private  meta : Meta
   ) { }
   
   saveVisitor(sendUrl){
@@ -37,6 +38,8 @@ export class AppComponent {
   }
 
   ngOnInit(){
+    this.meta.addTag({ name: 'keywords', content: 'thecodeman' });
+
     this.router.events
     .filter(event => event instanceof NavigationEnd)
     .subscribe(

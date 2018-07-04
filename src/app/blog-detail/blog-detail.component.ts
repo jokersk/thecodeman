@@ -4,6 +4,8 @@ import {HttpClient} from "@angular/common/http";
 import { url } from '../url/url';
 import * as marked from  'marked';
 import { CommentComponent } from '../comment/comment.component';
+import { Meta } from '@angular/platform-browser';
+
 
 @Component({
   selector: 'app-blog-detail',
@@ -15,11 +17,15 @@ import { CommentComponent } from '../comment/comment.component';
 export class BlogDetailComponent implements OnInit {
   
   
-  constructor( private route: ActivatedRoute, private http:HttpClient  ) { }
-  
+  constructor( private route: ActivatedRoute, private http:HttpClient,
+      private meta:Meta
+    ) { }
+
+  test:string
   id:number;
   blog : any;
   ngOnInit() {
+    
     this.route.paramMap
       .subscribe(params => {
         this.id = +params.get("id");
@@ -30,11 +36,13 @@ export class BlogDetailComponent implements OnInit {
           
           this.blog = data
           this.blog.content = marked(this.blog.content)
-          
+          this.meta.updateTag({name:"keywords",content: this.blog.title });      
         })
         
       })
   }
+
+ 
 
 
 

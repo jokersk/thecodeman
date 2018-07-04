@@ -11,6 +11,12 @@
 @import '~basscss-padding/css/padding.css';
 
 
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/type";
+
+
 .mat-form-field-underline .mat-form-field-ripple{
     background-color: #26a69a;
 }

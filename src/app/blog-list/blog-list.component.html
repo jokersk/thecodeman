@@ -1,5 +1,9 @@
 
-    <div class="" *ngFor="let blog of blogs">
+    
+    <mat-chip-list>
+      <mat-chip *ngFor="let tag of tags" (focus)="filterTags(tag.id)">{{tag.name}}</mat-chip>
+    </mat-chip-list>
+    <div class="" *ngFor="let blog of showblogs">
         <div class="">
           <div class="card ">
             <div class="card-content deep-purple-text darken-1">
